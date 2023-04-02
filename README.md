@@ -36,7 +36,7 @@ The purpose of this task is to help you better understand the concept following 
 - Open the [Square.cs](TypeConversions/TypesForConversions/Square.cs) file and inspect the code of the [Square](TypeConversions/TypesForConversions/Square.cs#L5) enumerator.
 - Open the [IColorable.cs](TypeConversions/TypesForConversions/IColorable.cs) file and inspect the code of the [IColorable](TypeConversions/TypesForConversions/IColorable.cs#L3) interface.
 - Open the [Color.cs](TypeConversions/TypesForConversions/Color.cs) file and inspect the code of the [Color](TypeConversions/TypesForConversions/Color.cs#L3) enumerator.
-- Open the [ImplicitReferenceConversions.cs](TypeConversions/ImplicitReferenceConversions.cs) file and implement all methods of the [ImplicitReferenceConversions](TypeConversions/ImplicitReferenceConversions.cs#L5) class using the information of the XML-comments.
+- Open the [ImplicitReferenceConversions.cs](TypeConversions/ImplicitReferenceConversions.cs) file and implement all methods of the [ImplicitReferenceConversions](TypeConversions/ImplicitReferenceConversions.cs#L6) class using the information of the XML-comments.
 
 ### Explicit Reference Conversions
 
