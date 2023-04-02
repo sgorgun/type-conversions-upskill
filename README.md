@@ -1,62 +1,83 @@
-# Casting Unit Test Project
+# Type Conversions
 
-Intermediate level task for practicing casting operations.
+Beginner level task for practicing implicit/explicit reference conversions and boxing/unboxing conversions.
 
-Estimated time to complete the task - 1h.
+Estimated time to complete the task - 0.5h.
 
 The task requires .NET 6 SDK installed.
 
 
 ## Task Description
 
-## Casting
+The purpose of this task is to help you better understand the concept following type conversions:    
+- implicit and explicit reference conversions;   
+- boxing and unboxing conversions.
 
-The purpose of this task is to help you better understand the concept of 'Casting'.
+### Boxing conversions
+
+- Open the [Point.cs](TypeConversions/TypesForConversions/Point.cs) file and inspect the code of the [Point](TypeConversions/TypesForConversions/Point.cs#L3) structure.
+- Open the [Color.cs](TypeConversions/TypesForConversions/Color.cs) file and inspect the code of the [Color](TypeConversions/TypesForConversions/Color.cs#L3) enumerator.
+- Open the [BoxingConversions.cs](TypeConversions/BoxingConversions.cs) file and implement all methods of the [BoxingConversions](TypeConversions/BoxingConversions.cs#L6) class using the information of the XML-comments.
+
+### Unboxing conversions 
+
+- Open the [Point.cs](TypeConversions/TypesForConversions/Point.cs) file and inspect the code of the [Point](TypeConversions/TypesForConversions/Point.cs#L3) structure.
+- Open the [Color.cs](TypeConversions/TypesForConversions/Color.cs) file and inspect the code of the [Color](TypeConversions/TypesForConversions/Color.cs#L3) enumerator.
+- Open the [UnboxingConversions.cs](TypeConversions/UnboxingConversions.cs) file and implement all methods of the [UnboxingConversions](TypeConversions/UnboxingConversions.cs#L6) class by using 
+    - [cast expression](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression)
+    - [as operator](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator)
+    - [pattern matching](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#is-operator)   
+    For more detailed information use the XML-comments.
+
+### Implicit Reference Conversions
+
+- Open the [Shape.cs](TypeConversions/TypesForConversions/Shape.cs) file and inspect the code of the [Shape](TypeConversions/TypesForConversions/Point.cs#L3) class.
+- Open the [Circle.cs](TypeConversions/TypesForConversions/Circle.cs) file and inspect the code of the [Circle](TypeConversions/TypesForConversions/Circle.cs#L5) class.
+- Open the [Square.cs](TypeConversions/TypesForConversions/Square.cs) file and inspect the code of the [Square](TypeConversions/TypesForConversions/Square.cs#L5) enumerator.
+- Open the [IColorable.cs](TypeConversions/TypesForConversions/IColorable.cs) file and inspect the code of the [IColorable](TypeConversions/TypesForConversions/IColorable.cs#L3) interface.
+- Open the [Color.cs](TypeConversions/TypesForConversions/Color.cs) file and inspect the code of the [Color](TypeConversions/TypesForConversions/Color.cs#L3) enumerator.
+- Open the [ImplicitReferenceConversions.cs](TypeConversions/ImplicitReferenceConversions.cs) file and implement all methods of the [ImplicitReferenceConversions](TypeConversions/ImplicitReferenceConversions.cs#L5) class using the information of the XML-comments.
+
+### Explicit Reference Conversions
+
+- Open the [Shape.cs](TypeConversions/TypesForConversions/Shape.cs) file and inspect the code of the [Shape](TypeConversions/TypesForConversions/Point.cs#L3) class.
+- Open the [Circle.cs](TypeConversions/TypesForConversions/Circle.cs) file and inspect the code of the [Circle](TypeConversions/TypesForConversions/Circle.cs#L5) class.
+- Open the [Square.cs](TypeConversions/TypesForConversions/Square.cs) file and inspect the code of the [Square](TypeConversions/TypesForConversions/Square.cs#L5) enumerator.
+- Open the [IColorable.cs](TypeConversions/TypesForConversions/IColorable.cs) file and inspect the code of the [IColorable](TypeConversions/TypesForConversions/IColorable.cs#L3) interface.
+- Open the [Color.cs](TypeConversions/TypesForConversions/Color.cs) file and inspect the code of the [Color](TypeConversions/TypesForConversions/Color.cs#L3) enumerator.
+- Open the [ExplicitReferenceConversions.cs](TypeConversions/ExplicitReferenceConversions.cs) file and implement all methods of the [ExplicitReferenceConversions](TypeConversions/ExplicitReferenceConversions.cs#L6) class by using 
+    - [cast expression](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression)
+    - [as operator](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator)
+    - [pattern matching](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#is-operator)   
+    For more detailed information use the XML-comments.
+
+## Fix Compiler Issues
+
+Additional style and code checks are enabled for the projects in this solution to help you maintaining consistency of the project source code and avoiding silly mistakes. [Review the Error List](https://learn.microsoft.com/en-us/visualstudio/ide/find-and-fix-code-errors#review-the-error-list) in Visual Studio to see all compiler warnings and errors.
+
+If a compiler error or warning message is not clear, [review errors details](https://learn.microsoft.com/en-us/visualstudio/ide/find-and-fix-code-errors#review-errors-in-detail) or google for the error or warning code to get more information about the issue.
 
 
-### 1. Perform 'upcasting'
+## Task Checklist
 
-Implement the [CheckUpcasting](Casting/StudentLogic.cs#L7) method of the *StudentLogic* class:
-* Write a code to perform upcasting of the 'Dog' class object into the 'Animal' class object  where 'Dog' is a child class and 'Animal' is a parent class.
-* Also assign the Name property of *Animal* class to "scooby".
-* This method returns the instance of *Animal* class.
+1. Rebuild the solution.
+1. Fix all compiler warnings and errors.
+1. Run all unit tests, make sure all unit tests completed successfully.
+1. Review all changes, make sure the only code files (.cs) in Integers project have changes. No changes in project files (.csproj) or in Integers.Tests project.
+1. Stage your changes, and create a commit.
+1. Push your changes to remote repository.
 
+## See also
 
-### 2. Perform 'downcasting' 
-
-Implement the [CheckDowncasting](Casting/StudentLogic.cs#L14) method of the *StudentLogic* class:
-* Write a code to perform downcasting of  the 'Animal' class object into the 'Cat' class object where 'Cat' is a child class and 'Animal' is a parent class.
-* This method returns the instance of *Cat* class.
-
-### 3. Perform 'boxing'
-
-Implement the [CheckBoxing](Casting/StudentLogic.cs#L21) method of the *StudentLogic* class:
-* Write a code in such a way that the integer variable 'number' is boxed into object type.
-* This method returns an object variable.
-
-### 4. Perform 'unboxing' 
-
-Implement the [CheckUnboxing](Casting/StudentLogic.cs#L28) method of the *StudentLogic* class:
-* Write a code in such a way that the  provided object variable 'number' is unboxed  to  integer type.
-* This method returns an integer variable.
-
-### 5. Perform 'implicit casting'
-
-Implement the [CheckImplicitCasting](Casting/StudentLogic.cs#L35) method of the *StudentLogic* class:
-* Write a code in such a way that the parameter (a byte variable) passed will be converted to short, ushort, int, uint, long, ulong, float, double and decimal. 
-* At the end, create a hashtable where key contains the type of the variable which has been obtained after typecasting and value contains the value of the variable.
-* It returns a Hashtable.
-
-### 6. Perform 'explicit casting' 
-
-Implement the [CheckExplicitCasting](Casting/StudentLogic.cs#L43) method of the *StudentLogic* class:
-* Write a code in such a way that the parameter (a decimal variable) passed is converted to short,ushort,int,uint,long,ulong and float type.
-* At the end, create a hashtable where key contains the  type of the variable  which has been obtained after typecasting and value contains the value of the variable.
-* It returns a Hashtable.
-
-### 7. Perform 'user-defined casting'
-
-Implement the [CheckUserdefinedcasting](Casting/StudentLogic.cs#L51) method of the *StudentLogic* class:
-* Write a code in such a way that  the provided value is typecasted into double by overloading double (with the help of *UserDefinedCast* class) and changing its default behaviour
-* At the end, add the object of the *UserDefinedCast*  class to the list<object> and then the typecasted value.
-* It returns a list<object>.
+* C# Language Reference
+  * [Integral numeric types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+  * [return](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement)
+  * [throw](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw)
+* C# Programming Guide
+  * [Constants](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constants)
+* .NET API
+  * [Int16 Struct](https://learn.microsoft.com/en-us/dotnet/api/system.int16)
+  * [Int32 Struct](https://learn.microsoft.com/en-us/dotnet/api/system.int32)
+  * [UInt32 Struct](https://learn.microsoft.com/en-us/dotnet/api/system.uint32)
+  * [Int64 Struct](https://learn.microsoft.com/en-us/dotnet/api/system.int64)
+  * [UInt64 Struct](https://learn.microsoft.com/en-us/dotnet/api/system.uint64)
