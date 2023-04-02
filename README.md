@@ -69,15 +69,8 @@ If a compiler error or warning message is not clear, [review errors details](htt
 
 ## See also
 
-* C# Language Reference
-  * [Integral numeric types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
-  * [return](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement)
-  * [throw](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw)
 * C# Programming Guide
-  * [Constants](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constants)
-* .NET API
-  * [Int16 Struct](https://learn.microsoft.com/en-us/dotnet/api/system.int16)
-  * [Int32 Struct](https://learn.microsoft.com/en-us/dotnet/api/system.int32)
-  * [UInt32 Struct](https://learn.microsoft.com/en-us/dotnet/api/system.uint32)
-  * [Int64 Struct](https://learn.microsoft.com/en-us/dotnet/api/system.int64)
-  * [UInt64 Struct](https://learn.microsoft.com/en-us/dotnet/api/system.uint64)
+  * [Casting and type conversions](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions)
+  * [Boxing and Unboxing](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing)
+  * [How to safely cast by using pattern matching and the is and as operators](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/safely-cast-using-pattern-matching-is-and-as-operators)  
+  * [Type-testing operators and cast expressions - is, as, typeof and casts](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator)
