@@ -69,6 +69,36 @@ namespace TypeConversions.Tests
             }
         }
 
+        public static IEnumerable<TestCaseData> ObjectToInt32TestCases
+        {
+            get
+            {
+                yield return new TestCaseData(-100, new Func<object, int?>(CastExpressionFromObjectToInt32));
+                yield return new TestCaseData(123, new Func<object, int?>(AsOperatorFromObjectToInt32));
+                yield return new TestCaseData(int.MaxValue, new Func<object, int?>(PatternMatchingFromObjectToInt32));
+            }
+        }
+
+        public static IEnumerable<TestCaseData> ValueTypeToInt32TestCases
+        {
+            get
+            {
+                yield return new TestCaseData(-100, new Func<ValueType, int?>(CastExpressionFromValueTypeToInt32));
+                yield return new TestCaseData(123, new Func<ValueType, int?>(AsOperatorFromValueTypeToInt32));
+                yield return new TestCaseData(int.MaxValue, new Func<ValueType, int?>(PatternMatchingFromValueTypeToInt32));
+            }
+        }
+
+        public static IEnumerable<TestCaseData> FormattableToInt32TestCases
+        {
+            get
+            {
+                yield return new TestCaseData(-100, new Func<IFormattable, int?>(CastExpressionFromIFormattableToInt32));
+                yield return new TestCaseData(123, new Func<IFormattable, int?>(AsOperatorFromIFormattableToInt32));
+                yield return new TestCaseData(int.MaxValue, new Func<IFormattable, int?>(PatternMatchingFromIFormattableToInt32));
+            }
+        }
+
         [TestCaseSource(nameof(ObjectToPointTestCases))]
         [Category("Unboxing Conversions")]
         public void Convert_FromObject_ReturnPoint(object obj, Func<object, Point?> converter)
@@ -127,6 +157,36 @@ namespace TypeConversions.Tests
             color = Color.Purple;
             Assert.That(color.GetType() == @enum.GetType());
             Assert.That(!color.Equals(@enum));
+        }
+
+        [TestCaseSource(nameof(ObjectToInt32TestCases))]
+        [Category("Unboxing Conversions")]
+        public void Convert_FromObject_ReturnInt32(object obj, Func<object, int?> converter)
+        {
+            int value = (int)converter(obj)!;
+            value = int.MinValue;
+            Assert.That(value.GetType() == obj.GetType());
+            Assert.That(!value.Equals(obj));
+        }
+
+        [TestCaseSource(nameof(ValueTypeToInt32TestCases))]
+        [Category("Unboxing Conversions")]
+        public void Convert_FromObject_ReturnInt32(ValueType valueType, Func<ValueType, int?> converter)
+        {
+            int value = (int)converter(valueType)!;
+            value = int.MinValue;
+            Assert.That(value.GetType() == valueType.GetType());
+            Assert.That(!value.Equals(valueType));
+        }
+
+        [TestCaseSource(nameof(FormattableToInt32TestCases))]
+        [Category("Unboxing Conversions")]
+        public void Convert_FromIFormattable_ReturnInt32(IFormattable formattable, Func<IFormattable, int?> converter)
+        {
+            int value = (int)converter(formattable)!;
+            value = int.MinValue;
+            Assert.That(value.GetType() == formattable.GetType());
+            Assert.That(!value.Equals(formattable));
         }
     }
 }
