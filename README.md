@@ -51,22 +51,6 @@ The purpose of this task is to help you better understand the concept following 
     - [pattern matching](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#is-operator)   
     For more detailed information use the XML-comments.
 
-## Fix Compiler Issues
-
-Additional style and code checks are enabled for the projects in this solution to help you maintaining consistency of the project source code and avoiding silly mistakes. [Review the Error List](https://learn.microsoft.com/en-us/visualstudio/ide/find-and-fix-code-errors#review-the-error-list) in Visual Studio to see all compiler warnings and errors.
-
-If a compiler error or warning message is not clear, [review errors details](https://learn.microsoft.com/en-us/visualstudio/ide/find-and-fix-code-errors#review-errors-in-detail) or google for the error or warning code to get more information about the issue.
-
-
-## Task Checklist
-
-1. Rebuild the solution.
-1. Fix all compiler warnings and errors.
-1. Run all unit tests, make sure all unit tests completed successfully.
-1. Review all changes, make sure the only code files (.cs) in Integers project have changes. No changes in project files (.csproj) or in Integers.Tests project.
-1. Stage your changes, and create a commit.
-1. Push your changes to remote repository.
-
 ## See also
 
 * C# Programming Guide
