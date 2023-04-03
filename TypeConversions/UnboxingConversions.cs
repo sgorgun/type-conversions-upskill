@@ -185,7 +185,7 @@ namespace TypeConversions
         /// </summary>
         /// <param name="formattable"><see cref="IFormattable"/> object.</param>
         /// <returns><see cref="int"/> object or null when unable to cast <see cref="IFormattable"/> type to <see cref="int"/> type.</returns>
-        public static int? AsOperatorFromIFormattableToInt32(IFormattable formattable)  => throw new NotImplementedException();
+        public static int? AsOperatorFromIFormattableToInt32(IFormattable formattable) => throw new NotImplementedException();
 
         /// <summary>
         /// Performs an unboxing conversion <see cref="IFormattable"/> type to <see cref="int"/> type by using pattern matching.
